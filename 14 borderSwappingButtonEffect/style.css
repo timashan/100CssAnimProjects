@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Verdana;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #212121;
+}
+
+a {
+  height: 6rem;
+  width: 20rem;
+  color: #fdc518;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2.2rem;
+  position: relative;
+  text-align: center;
+  line-height: 6rem;
+}
+
+a::before,
+a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: transform 0.5s;
+}
+
+a::before {
+  height: 9rem;
+  top: -1.5rem;
+  border-left: 2px solid red;
+  border-right: 2px solid #fdc518;
+  transition-delay: 0.5s;
+}
+
+a::after {
+  width: 23rem;
+  left: -1.5rem;
+  border-top: 2px solid red;
+  border-bottom: 2px solid #fdc518;
+}
+
+a:hover::before {
+  transform: rotateY(180deg);
+}
+
+a:hover::after {
+  transform: rotateX(180deg);
+}

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=BenchNine&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "BenchNine", sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+a {
+  color: white;
+  background-color: #c47135;
+  padding: 1.6rem 4.2rem;
+  text-decoration: none;
+  font-size: 2.8rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+a::before,
+a::after {
+  content: "";
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  transition: height 0.5s, width 0.5s;
+}
+
+a::after {
+  top: -6px;
+  left: -6px;
+  border-top: 2px solid #c47135;
+  border-left: 2px solid #c47135;
+}
+
+a::before {
+  right: -6px;
+  bottom: -6px;
+  border-bottom: 2px solid #c47135;
+  border-right: 2px solid #c47135;
+}
+
+a:hover::before,
+a:hover::after {
+  height: 100%;
+  width: 100%;
+}

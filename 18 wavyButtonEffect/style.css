@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+a {
+  color: #00aeff;
+  border: 2px solid #00aeff;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: color 1s;
+  overflow: hidden;
+}
+
+.wave {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: calc(100% + 2.2rem);
+  left: 0;
+  background-color: #00aeff;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.wave::before {
+  content: "";
+  height: 2.2rem;
+  width: 100%;
+  background: url("../img/wave.png");
+  position: absolute;
+  top: -2.2rem;
+  left: 0;
+  animation: wave 0.5s linear infinite;
+}
+
+a:hover {
+  color: white;
+}
+
+a:hover .wave {
+  top: 0;
+}
+
+@keyframes wave {
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: 11.8rem;
+  }
+}
