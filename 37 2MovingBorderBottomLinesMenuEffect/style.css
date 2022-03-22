@@ -26,6 +26,7 @@ body {
 ul {
   list-style-type: none;
   display: flex;
+  gap: 3rem;
 }
 
 ul li {
@@ -33,9 +34,39 @@ ul li {
 }
 
 ul a {
-  padding: 1rem 1.5rem;
   color: #3d3d3d;
   text-transform: capitalize;
   text-decoration: none;
   font-size: 2rem;
+  text-transform: uppercase;
+}
+
+ul li::before,
+ul li::after {
+  content: "";
+  width: 0;
+  height: 0.5rem;
+  position: absolute;
+  top: 120%;
+  transition: all 0.5s;
+}
+
+ul li::before {
+  left: 0;
+  background-color: #00bcd4;
+}
+
+ul li::after {
+  right: 0;
+  background-color: #f0f;
+}
+
+ul li:hover::before {
+  width: 50%;
+  transform: translateX(100%);
+}
+
+ul li:hover::after {
+  width: 50%;
+  transform: translateX(-100%);
 }

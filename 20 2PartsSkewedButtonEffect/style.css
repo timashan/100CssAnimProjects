@@ -21,53 +21,54 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #222;
+  background-color: #10ac84;
 }
 
 a {
   color: white;
-  padding: 4rem 8rem;
+  padding: 1.8rem 3rem;
   text-decoration: none;
-  font-size: 4.5rem;
+  font-size: 2.8rem;
   position: relative;
+  font-weight: 700;
   text-transform: uppercase;
-  background-color: #f1c40f;
+  letter-spacing: 0.7rem;
 }
 
 a::before,
 a::after {
-  content: "button";
+  content: "";
+  width: 50%;
   height: 100%;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #2ce771;
-  transform-origin: top;
-  transform: rotateX(270deg);
-  transition: transform 0.5s;
+  z-index: -1;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 a::before {
-  transition-delay: 0.25s;
+  top: -5px;
+  left: 0;
+  background-color: #ee5253;
+  transform: skewX(30deg);
 }
 
 a::after {
-  background-color: red;
+  top: 5px;
+  left: 52%;
+  background-color: #0a3d63;
+  transform: skewX(30deg);
 }
 
 a:hover::before,
 a:hover::after {
-  transform: rotate(0);
+  top: 0;
+  transform: skew(0);
 }
 
 a:hover::before {
-  transition-delay: 0s;
+  left: 50%;
 }
 
-a:hover::after {
-  transition-delay: 0.25s;
+a:hover:after {
+  left: 0;
 }
