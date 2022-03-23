@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ea2027;
+}
+
+h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+span::before {
+  content: "animations";
+  text-transform: uppercase;
+  color: #1b1464;
+  animation: word-switch 5s infinite;
+}
+
+@keyframes word-switch {
+  0% {
+    content: "transitions";
+  }
+  50% {
+    content: "animations";
+  }
+  100% {
+    content: "transforms";
+  }
+}

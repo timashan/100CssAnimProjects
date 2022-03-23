@@ -18,8 +18,16 @@ body {
   font-family: sans-serif;
   font-size: 1.6rem;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #26de81;
+}
+
+.banner {
+  background: url(../img/bg.png);
+  height: 100vh;
+  animation: patternAnim 15s linear infinite;
+}
+
+@keyframes patternAnim {
+  to {
+    background-position: 800px 600px;
+  }
 }

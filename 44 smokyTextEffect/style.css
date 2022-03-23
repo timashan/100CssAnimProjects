@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #444;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  font-size: 12rem;
+  font-weight: bold;
+  color: white;
+}
+
+ul li {
+  letter-spacing: 1rem;
+  transition: all 2s;
+}
+
+ul:hover li {
+  opacity: 0;
+  transform: rotate(45deg) translateY(-200%);
+  filter: blur(2rem);
+}
+
+ul li:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+ul li:nth-child(3) {
+  transition-delay: 0.8s;
+}
+
+ul li:nth-child(4) {
+  transition-delay: 1.2s;
+}
+
+ul li:nth-child(5) {
+  transition-delay: 1.6s;
+}

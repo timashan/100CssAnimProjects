@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.box::before,
+.box::after,
+.rotated::before,
+.rotated::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0 solid #58c747;
+  transition: transform 0.5s;
+}
+
+.box::before,
+.rotated::before {
+  border-width: 4px 0 4px 0;
+  transform: scaleX(0);
+}
+
+.box::after,
+.rotated::after {
+  border-width: 0 4px 0 4px;
+  transform: scaleY(0);
+}
+
+.box h1 {
+  text-align: center;
+  font-size: 2.4rem;
+}
+
+span {
+  color: #58c747;
+}
+
+.rotated {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.box:hover::before {
+  transform: scaleX(1);
+}
+
+.box:hover::after {
+  transform: scaleY(1);
+  transition-delay: 0.4s;
+}
+
+.box:hover .rotated::before {
+  transform: scaleX(1);
+  transition-delay: 0.8s;
+}
+
+.box:hover .rotated::after {
+  transform: scaleY(1);
+  transition-delay: 1.2s;
+}

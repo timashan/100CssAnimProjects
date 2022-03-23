@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.background {
+  background: url("../img/bg.jpg");
+  background-size: auto 120%;
+  background-position: bottom left;
+  height: 100vh;
+  position: relative;
+  animation: driving 15s linear infinite;
+}
+
+@keyframes driving {
+  from {
+    background-position: bottom left;
+  }
+  to {
+    background-position: bottom right;
+  }
+}
+
+.car,
+.bike {
+  position: absolute;
+}
+
+.car {
+  width: 20rem;
+  bottom: -5rem;
+  left: 50%;
+}
+
+.bike {
+  width: 15rem;
+  bottom: 5rem;
+  left: 35%;
+}
