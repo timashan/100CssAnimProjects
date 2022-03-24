@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a3d62;
+}
+
+.loader {
+  height: 9rem;
+  width: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.loader span {
+  height: 3rem;
+  width: 3rem;
+  background-color: white;
+  transform-origin: top left;
+  animation: shrink 1s linear infinite;
+}
+
+@keyframes shrink {
+  to {
+    transform: scale(0);
+  }
+}
+
+.loader span:nth-child(4),
+.loader span:nth-child(5),
+.loader span:nth-child(6) {
+  animation-delay: 0.1s;
+}
+
+.loader span:nth-child(7),
+.loader span:nth-child(8),
+.loader span:nth-child(9) {
+  animation-delay: 0.2s;
+}

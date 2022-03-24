@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222d3e;
+}
+
+.loader {
+  width: 20rem;
+  height: 20rem;
+  position: relative;
+}
+
+.outer,
+.middle,
+.inner,
+.dot {
+  position: absolute;
+  border: 0.5rem solid transparent;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+.outer {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-color: transparent #eb4d4b transparent #eb4d4b;
+}
+
+.middle {
+  top: 3rem;
+  left: 3rem;
+  bottom: 3rem;
+  right: 3rem;
+  animation-direction: reverse;
+  border-color: transparent #218c74 transparent #218c74;
+}
+
+.inner {
+  top: 6rem;
+  left: 6rem;
+  bottom: 6rem;
+  right: 6rem;
+  border-color: transparent #ccae62 transparent #ccae62;
+}
+
+.dot {
+  top: 9rem;
+  left: 9rem;
+  bottom: 9rem;
+  right: 9rem;
+  border: none;
+  background-color: white;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}

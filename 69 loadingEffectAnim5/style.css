@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+.loading {
+  height: 0.3rem;
+  width: 30rem;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: grow 2s infinite alternate;
+}
+
+@keyframes grow {
+  40% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  60% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}

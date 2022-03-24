@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b1734;
+}
+
+.container {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  transform: rotate(45deg);
+  animation: grow 1s infinite;
+}
+
+.container span {
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  animation: rotate 1s linear infinite;
+}
+
+.container span:nth-child(1) {
+  top: 0;
+  left: 0;
+  background-color: #fceba7;
+}
+.container span:nth-child(2) {
+  top: 0;
+  right: 0;
+  background-color: #55ddb9;
+}
+.container span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  background-color: #fd6c64;
+}
+.container span:nth-child(4) {
+  bottom: 0;
+  right: 0;
+  background-color: #1f78b0;
+}
+
+@keyframes grow {
+  10% {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  50% {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  90% {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+@keyframes rotate {
+  10% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  90% {
+    transform: rotate(90deg);
+  }
+
+  100% {
+    transform: rotate(90deg);
+  }
+}

@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+.loader {
+  width: 7rem;
+  display: flex;
+  gap: 1px;
+}
+
+.loader span {
+  width: 1rem;
+  height: 6rem;
+  background-color: white;
+  animation: grow 2s ease-in-out infinite;
+  transform: scaleY(0.1);
+}
+
+.loader span:nth-child(1) {
+  background-color: #2eeca8;
+  animation-delay: 0.2s;
+}
+.loader span:nth-child(2) {
+  background-color: #eade3d;
+  animation-delay: 0.3s;
+}
+.loader span:nth-child(3) {
+  background-color: #55acee;
+  animation-delay: 0.4s;
+}
+.loader span:nth-child(4) {
+  background-color: #ec902e;
+  animation-delay: 0.5s;
+}
+.loader span:nth-child(5) {
+  background-color: #09b7bf;
+  animation-delay: 0.6s;
+}
+.loader span:nth-child(6) {
+  background-color: #ea3d8c;
+  animation-delay: 0.7s;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0.1);
+  }
+
+  35% {
+    transform: scaleY(1);
+  }
+
+  60%,
+  100% {
+    transform: scaleY(0.1);
+  }
+}

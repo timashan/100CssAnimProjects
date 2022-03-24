@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ee5253;
+}
+
+.loader {
+  width: 15rem;
+  height: 15rem;
+  position: relative;
+}
+
+.loader span {
+  background-color: white;
+  border-radius: 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: move 2s linear infinite;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+@keyframes move {
+  12.5% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 0;
+    left: 50%;
+  }
+
+  37.5% {
+    top: 0;
+    left: 50%;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  67.5% {
+    top: 50%;
+    left: 50%;
+  }
+
+  75% {
+    top: 50%;
+    left: 0;
+  }
+
+  87.5% {
+    top: 50%;
+    left: 0;
+  }
+}
