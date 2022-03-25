@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+.wave {
+  height: 50rem;
+  width: 50rem;
+  text-align: center;
+  line-height: 50rem;
+  position: relative;
+}
+
+.wave h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  font-size: 17rem;
+  text-transform: uppercase;
+}
+
+.wave h2:first-child {
+  -webkit-text-stroke: 1px #03a9f4;
+}
+
+.wave h2:last-child {
+  color: #03a9f4;
+  clip-path: polygon(
+    0 40%,
+    20% 40%,
+    40% 50%,
+    50% 55%,
+    70% 55%,
+    100% 45%,
+    100% 100%,
+    0 100%
+  );
+
+  animation: wave 1s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  to {
+    clip-path: polygon(
+      0 45%,
+      20% 55%,
+      40% 55%,
+      50% 50%,
+      70% 40%,
+      100% 40%,
+      100% 100%,
+      0 100%
+    );
+  }
+}

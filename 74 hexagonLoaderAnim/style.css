@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222;
+}
+
+.line {
+  height: 0.4rem;
+  width: 30rem;
+  background-color: white;
+  position: relative;
+  animation: rotate 1s linear alternate infinite;
+}
+
+.hexagon {
+  width: 5rem;
+  height: 3rem;
+  background-color: inherit;
+  position: absolute;
+  bottom: 1.8rem;
+  left: 0;
+  animation: move 1s linear infinite alternate;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hexagon::before {
+  transform: rotate(60deg);
+}
+
+.hexagon::after {
+  transform: rotate(-60deg);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-30deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes move {
+  to {
+    left: calc(100% - 5rem);
+    transform: rotate(1turn);
+  }
+}

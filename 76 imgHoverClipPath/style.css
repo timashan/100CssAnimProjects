@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #555;
+}
+
+.container {
+  width: 80rem;
+  height: 50rem;
+  background-color: #333;
+  position: relative;
+  cursor: pointer;
+}
+
+.clip {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.clip:nth-child(1) {
+  background-image: url(../img/one.jpg);
+  clip-path: polygon(0 0, 20% 0, 40% 100%, 0 100%);
+}
+
+.clip:nth-child(2) {
+  background-image: url(../img/two.jpg);
+  clip-path: polygon(20% 0, 80% 0, 60% 100%, 40% 100%);
+}
+
+.clip:nth-child(3) {
+  background-image: url(../img/three.jpg);
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
+}
+
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

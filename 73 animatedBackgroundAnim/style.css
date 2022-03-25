@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  border: 0 solid white;
+  border-width: 0.5rem 0 0.5rem 0;
+}
+
+.square {
+  background-color: white;
+  position: absolute;
+  bottom: -100%;
+  animation: float 10s ease-in-out infinite;
+}
+
+.square:nth-child(1) {
+  left: 7%;
+  width: 10rem;
+  height: 10rem;
+}
+.square:nth-child(2) {
+  left: 15%;
+  width: 6.5rem;
+  height: 6.5rem;
+  animation-delay: 4s;
+}
+.square:nth-child(3) {
+  left: 45%;
+  width: 8.2rem;
+  height: 8.2rem;
+  animation-delay: 3s;
+}
+.square:nth-child(4) {
+  left: 55%;
+  width: 7rem;
+  height: 7rem;
+  animation-delay: 2s;
+}
+.square:nth-child(5) {
+  left: 27%;
+  width: 6rem;
+  height: 6rem;
+  animation-delay: 6s;
+}
+.square:nth-child(6) {
+  left: 60%;
+  width: 5.5rem;
+  height: 5.5rem;
+  animation-delay: 4s;
+}
+.square:nth-child(7) {
+  left: 85%;
+  width: 9rem;
+  height: 9rem;
+  animation-delay: 9s;
+}
+.square:nth-child(8) {
+  left: 10%;
+  width: 4.5rem;
+  height: 4.5rem;
+  animation-delay: 4s;
+}
+.square:nth-child(9) {
+  left: 10%;
+  width: 4.5rem;
+  height: 4.5rem;
+  animation-delay: 7s;
+}
+.square:nth-child(10) {
+  left: 6%;
+  width: 5.5rem;
+  height: 5.5rem;
+  animation-delay: 7s;
+}
+
+@keyframes float {
+  to {
+    bottom: 100%;
+    opacity: 0;
+    transform: rotate(0.5turn);
+  }
+}
