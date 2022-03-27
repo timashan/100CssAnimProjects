@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  cursor: pointer;
+  width: 50rem;
+  height: 25rem;
+  background-color: #c7ecee;
+  padding: 2rem 8rem 2rem 2rem;
+  border-radius: 1rem;
+  clip-path: circle(7% at 93% 20%);
+  transition: clip-path 0.5s;
+}
+
+.card:hover {
+  clip-path: circle(70%);
+}
+
+h1 {
+  margin: 2rem 0;
+}

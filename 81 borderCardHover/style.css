@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #74b9ff;
+}
+
+.card {
+  width: 30rem;
+  height: 40rem;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.face--1 {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h2 {
+  color: #013d4a;
+  margin: 8rem 0 2rem;
+}
+
+.content p {
+  margin-bottom: 4rem;
+  color: #777;
+}
+
+.content a {
+  color: #013d4a;
+  padding: 0.5rem 1rem;
+  border: 3px solid #013d4a;
+  text-transform: capitalize;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.5s;
+}
+
+.content a:hover {
+  background-color: #013d4a;
+  color: white;
+}
+
+.face--2 {
+  background-color: #013d4a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  transition: all 0.5s;
+  border: 2px solid #013d4a;
+}
+
+.card:hover .face--2 {
+  height: 8rem;
+  width: 8rem;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: #013d4a;
+  background-color: transparent;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
